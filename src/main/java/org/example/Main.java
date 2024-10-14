@@ -6,7 +6,7 @@ public class Main {
         System.out.println("Hello world!");
 
         /* TASKS
-        
+
         * Step 1: Filter a list of numbers and only output the even numbers.
 
         Step 2: Use 'map' and double each number in the list.
