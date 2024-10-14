@@ -1,8 +1,8 @@
 package org.example;
 public class Student {
-    private int id;
+    private String id;
     private String name;
     private String postalCode;
     private String age;
-    public Student(int id,String name,String postalCode, int age) {}
+    public Student(String id,String name,String postalCode, String age) {}
 }
