@@ -58,13 +58,11 @@ public class Main {
         });
 
         // Bonus
-
-
-
         String COMMA_DELIMITER = ",";
 
         try (Stream<String> lines = Files.lines(Path.of("students.csv")) ){
 
+            // read and clean data
             List<List<String>> records = lines.map(line -> Arrays.asList(line.split(COMMA_DELIMITER)))
                     .skip(1) // skip header
                     .filter(line -> !line.isEmpty()) // skip empy lines
@@ -73,7 +71,7 @@ public class Main {
                     .peek(line -> System.out.println(line)) // check by print
                     .collect(Collectors.toList());
 
-            //System.out.println(records);
+            // pipe data in List of student objects
             List<Student> studentList = new ArrayList<>();
             for (List<String> record : records) {
                 Student newStudent = new Student(record.get(0),record.get(1),record.get(2),record.get(3));
